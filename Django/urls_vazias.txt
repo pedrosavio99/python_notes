@@ -1,0 +1,3 @@
+evitar aqueles page not found em nossas apis
+
+é so por um path com uam url vazia , como sera feito em autenticacao urls em baixo do path de cadastro

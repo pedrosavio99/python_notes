@@ -1,0 +1,19 @@
+padrão: MVC padrao
+
+model - view(n precisa se grafica) - controller
+
+o django usa um padrao diferente mais é a mesma coisa 
+
+    MVT  - model,view,template
+
+    model - arquivos referente a banco de dados 
+
+    view - logica de nosso programa
+
+    template - essa sera nossa interface, html e afins json xml
+
+
+podemos separar nossa aplicacao django em apps, DIVIDIR PARA CONQUISTAR 
+
+Os apps são microaplicacoes, tipo login, auth, pedidos, entrga, pagamentos etc...
+

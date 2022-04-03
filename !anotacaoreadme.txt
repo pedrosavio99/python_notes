@@ -1,6 +1,8 @@
 ==================== variaveis e tipos de dados 
 #por aqui o passo a passo do Venv
 
+SEMPRE SIGA OS EXEMPLOS DE ATRIBUICOES DAS VARIAVEIS PARA SEGUIR O PADRAO PYTHON
+
 
 ===================== funoes uteis diversas
 

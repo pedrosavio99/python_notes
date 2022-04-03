@@ -1,0 +1,5 @@
+apps são as microaplicacao de nossa aplicacao inteira
+
+    python3 manage.py startapp autenticacao
+
+apos criar um novo app vc precisa referenciar ele na url do core de sua aplicacao 

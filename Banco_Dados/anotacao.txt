@@ -1,0 +1,32 @@
+banco de dados relacionais = relaciona tabelas 
+
+
+
+antes de criar um banco sempre faça um diagrama pra pode entender as relaçoes entre as tabelas
+como a relação direta entre um cliente que compra um determeninado produto
+
+sgbd = sistema gerenciador de banco de dados
+
+linguagem sql ou interface grafica
+
+
+Manual de como usar  asintaxy de importacao de um banco de dados e utilizacao de dados 
+salvos nele basta ver a aula novamete e copiar os codigos... o arquivo esta corrompido e precisará ser 
+reescrito. PS: so funciona em mysql, mas  asintaxy provalmebte serve em outros bancos e a logica com certeza é a mesma
+
+=======================================
+
+ORMS = mapeamento de objetos em bancos de dados relacionais
+
+vc não usa mais linguagem sql e apanas diz oq vc quer fazer e ele faz 
+as determinadas importacoes e sintaxys para cada banco sem precisar refatorar
+qual ORMS a beetller usa? postgree - python -  sqlAlchemy orms padrao do django
+
+
+
+=======================================
+
+Foreign key 
+
+Chaves estrageiras sao referencias a uma outra tabela, no entanto é necessário que esse valor exista na 
+tabela exportadora 

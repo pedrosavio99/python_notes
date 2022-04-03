@@ -1,0 +1,146 @@
+documentacao oficial  :  https://www.djangoproject.com/  todos os erros que vc encontrar vão estar documentados aqui 
+
+
+
+========================================================================
+
+=========UPAR NO GIT NO LINUX
+
+abra o terminal na pasta do seu projeto
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/pedrosavio99/restframework-django.git
+git push -u origin main
+
+mas vai dar errado pq vc precisa do token de autenticaao kk
+veja esse video bobao
+
+( https://www.youtube.com/watch?v=PMP3RmhkzkA )
+######### INSTALACAO ======================================
+
+INSTLAR O PIP EO VENV
+
+apt install python3.8-venv
+sudo pip install virtualenv
+python3 -m venv venv
+entrar na venv
+
+source venv/bin/activate
+venv instalada e ativada! e ja podemos usar o pip
+
+intalar django
+
+pip install django
+
+=======================================================================
+criar migrations em cada app 
+
+rode o comando python3 manage.py makemigrations
+
+aplicar mudanças no banco
+
+python3 manage.py migrate
+
+popular os bancos 
+
+python3 manage.py init_database
+
+rodar servidor no terminal
+
+ python3 manage.py runserver 8009
+ 
+ criar admin
+ 
+ 	python3 manage.py createsuperuser
+
+=============================================
+
+verificar a versao django:
+    python3 -m django --version
+
+criar um projeto do 0;
+
+    django-admin startproject mysite .
+
+resumo dos diretorios criados:
+
+O diretório mysite/ exterior é um contêiner para o seu projeto. Seu nome não importa para o Django; 
+você pode renomeá-lo para qualquer nome que você quiser.
+
+
+mysite/settings.py: configurações para este projeto Django.
+
+
+mysite/urls.py: as declarações de URLs para este projeto Django; um “índice” de seu site movido a Django.
+
+
+servidor de desenvolvimento:
+
+    python manage.py runserver
+
+escolher a porta do servidor 
+
+    python manage.py runserver 8010
+
+
+Suas aplicações, ou “apps”, podem ficar em qualquer lugar dentro do seu caminho de busca de módulos Python. Neste tutorial, 
+iremos criar nossa “app” de enquete no mesmo diretório que seu arquivo manage.py para que possa ser importado como um módulo 
+de nível superior dentro do projeto, ao invés de ser um submódulo de mysite.
+
+Para criar sua aplicação, certifique-se de que esteja no mesmo diretório que manage.py e digite o seguinte comando:
+
+    python3 manage.py startapp polls
+
+dentro da raiz do projeto em setings adicione todos os apps criados
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'polls' #esse aqui foi o app que vc criouS
+]
+
+
+
+criar um arquivo urls em cada app pra poder importar no arquivo principal "mysite" urls
+
+
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+
+
+O próximo passo é apontar na raiz da URLconf para o módulo polls.urls. No arquivo mysite/urls.py, 
+adicione uma importação de django.urls.include e insira um include() na lista urlpatterns, de forma que você tenha:
+
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('polls/', include('polls.urls')),
+    path('admin/', admin.site.urls),
+]
+
+A função include() permite referenciar outras URLconfs. Qualquer lugar que o Django encontrar include(), irá recortar todas as 
+partes da URL encontrada até aquele ponto e enviar a string restante para URLconf incluído para processamento posterior.
+
+
+http://127.0.0.1:8010/polls/  pronto pode verificar seu novo app
+
+================================================================
+
+configurar o banco:
+
+    python3 manage.py makemigrations
+    python3 manage.py migrate
+

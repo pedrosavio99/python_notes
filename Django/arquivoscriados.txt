@@ -1,0 +1,14 @@
+manage.py é o arquivo criado para podermos executa o servidor, fazer migracoces, criar super user com o comando 
+
+    python3 manage.py migrate ou runserver
+
+
+o wsgi.py é a interface de servidores web, quando vc for fazer o deploy de sua aplicacao é nele que vc
+vai se preocupar, não tem suporte para aplicacoes asincronas, isso fica por conta do asgi.py
+
+os dois principais arquivos sao o urls e o settings
+
+urls: onde criamos as rotas de nossos servicos
+
+settings: logicas para as aplicacoes sao cadastradas nele em INSTALLED_APPS, configuramos tbm os
+o banco de dados em DATABASES
